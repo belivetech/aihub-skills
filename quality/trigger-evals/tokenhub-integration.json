@@ -1,0 +1,66 @@
+[
+  {
+    "query": "Point our Next.js app's OpenAI client at BeLive AI Hub instead of api.openai.com. The key is in AIHUB_KEY.",
+    "should_trigger": true
+  },
+  {
+    "query": "Set up Claude Code to use aihub.belive.sg as its model provider with deepseek/deepseek-v4-pro.",
+    "should_trigger": true
+  },
+  {
+    "query": "Our Codex CLI config uses AI Hub and every request fails with 400 on store: true. How do I fix it?",
+    "should_trigger": true
+  },
+  {
+    "query": "Which AI Hub models support tool calling and cost under $1 per million input tokens?",
+    "should_trigger": true
+  },
+  {
+    "query": "Estimate what 10,000 image generations would cost on AI Hub for the cheapest per-image model.",
+    "should_trigger": true
+  },
+  {
+    "query": "Streaming from the AI Hub chat completions endpoint stops without [DONE] sometimes. Make our parser handle it.",
+    "should_trigger": true
+  },
+  {
+    "query": "Send a PDF and a screenshot to a vision model through sk-tokenhub keys and get a JSON summary back.",
+    "should_trigger": true
+  },
+  {
+    "query": "Add a text-to-speech endpoint to our Flask app using AI Hub, saving WAV files.",
+    "should_trigger": true
+  },
+  {
+    "query": "Configure OpenClaw to use BeLive's OpenAI-compatible gateway with a fallback model.",
+    "should_trigger": true
+  },
+  {
+    "query": "Call Tencent Cloud TokenHub at tokenhub.tencentmaas.com with my Tencent SecretId.",
+    "should_trigger": false
+  },
+  {
+    "query": "Migrate our app from the OpenRouter TypeScript SDK to the latest version of @openrouter/sdk.",
+    "should_trigger": false
+  },
+  {
+    "query": "Fine-tune a Llama model on our support tickets using Together AI.",
+    "should_trigger": false
+  },
+  {
+    "query": "Write a Python function that retries an HTTP request with exponential backoff.",
+    "should_trigger": false
+  },
+  {
+    "query": "Call the OpenAI API directly with the official openai package and gpt-5.",
+    "should_trigger": false
+  },
+  {
+    "query": "Deploy a LiteLLM proxy on Kubernetes and add a team budget.",
+    "should_trigger": false
+  },
+  {
+    "query": "Explain how transformer attention works.",
+    "should_trigger": false
+  }
+]

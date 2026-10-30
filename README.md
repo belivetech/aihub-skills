@@ -15,17 +15,44 @@ reads the Markdown docs.
 
 ## Install
 
-Copy the skill folder into your client's skills folder.
+### Claude Code plugin
 
-Claude Code, for every project:
+Installing as a plugin lets Claude Code update the skill:
+
+```
+/plugin marketplace add belivetech/aihub-skills
+/plugin install aihub@aihub
+```
+
+### GitHub CLI
+
+`gh skill` (GitHub CLI 2.90.0 or later) installs into Claude Code, Codex, Cursor, Gemini CLI and
+other clients. Add `--scope user` for every project and `--agent <name>` for one client:
+
+```bash
+gh skill install belivetech/aihub-skills tokenhub-integration
+```
+
+Pin a release with `--pin v1.2.4`. `gh skill` records the source in the installed `SKILL.md`
+frontmatter, so that one file's hash differs from `manifest.json`; the other files match.
+
+### Skills CLI
+
+```bash
+npx skills add belivetech/aihub-skills
+```
+
+### Cursor
+
+Add a remote rule in **Settings > Rules > Add Rule > Remote Rule (GitHub)** with
+`belivetech/aihub-skills`.
+
+### Copy the folder
+
+From a clone of this repository:
 
 ```bash
 cp -R skills/tokenhub-integration ~/.claude/skills/
-```
-
-Codex CLI:
-
-```bash
 cp -R skills/tokenhub-integration ~/.codex/skills/
 ```
 
@@ -55,6 +82,14 @@ node --experimental-strip-types fixtures/run-offline.ts
 `manifest.json` lists every file with its SHA-256. Each release is a tag (`v1.2.4`). A released
 version's files never change; a correction ships as a new version. This repository is generated
 from the AI Hub console source, so open an issue rather than a pull request that edits the files.
+
+## Checks
+
+`python scripts/validate.py` checks each skill's frontmatter, every file against
+`manifest.json`, the plugin versions and the trigger evals; CI runs it with the offline fixtures
+on every pull request. `quality/trigger-evals/` holds prompts that should and should not load each
+skill, including near misses such as Tencent Cloud TokenHub and OpenRouter, for tuning the
+description.
 
 ## License
 
