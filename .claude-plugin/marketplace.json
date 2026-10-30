@@ -1,0 +1,18 @@
+{
+  "$schema": "https://code.claude.com/schemas/marketplace.json",
+  "name": "aihub",
+  "owner": {
+    "name": "BeLive Technology",
+    "url": "https://aihub.belive.sg"
+  },
+  "metadata": {
+    "description": "BeLive AI Hub skills for coding agents"
+  },
+  "plugins": [
+    {
+      "name": "aihub",
+      "source": "./",
+      "description": "Agent Skills for BeLive AI Hub, the OpenAI-compatible model gateway: integration, model discovery, pricing, streaming, tools, multimodal input and coding agents"
+    }
+  ]
+}
