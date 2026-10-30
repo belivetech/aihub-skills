@@ -1,9 +1,9 @@
 ---
 name: tokenhub-integration
-description: Use when integrating BeLive AI Hub (aihub.belive.sg, the OpenAI-compatible LLM gateway) into an application, pointing a coding agent such as Codex CLI or Claude Code at it, migrating an OpenAI-compatible client to it, or troubleshooting its chat, streaming, tool-calling, Responses or Messages routes. Not for Tencent Cloud TokenHub (tokenhub.tencentmaas.com), which is a different product.
+description: Use when integrating BeLive AI Hub (aihub.belive.sg, the OpenAI-compatible LLM gateway) into an application, pointing a coding agent such as Codex CLI or Claude Code at it, migrating an OpenAI-compatible client to it, generating images, video, speech or music through it, handling its job webhooks, or troubleshooting its chat, streaming, tool-calling, media, Responses or Messages routes. Not for Tencent Cloud TokenHub (tokenhub.tencentmaas.com), which is a different product.
 license: MIT. Complete terms in LICENSE.txt.
 metadata:
-  version: 1.2.4
+  version: 1.2.5
   docs: https://aihub.belive.sg/docs
 ---
 
@@ -16,8 +16,8 @@ product's domains, keys or configuration.
 ## Workflow
 
 1. **Identify the target.** Which application or agent, which environment (production or
-   staging), and which wire protocol: Chat Completions, Responses (Codex CLI) or Messages
-   (Claude Code). Read the existing configuration before proposing an edit, and keep every other
+   staging), and which wire protocol: Chat Completions, Responses (Codex CLI), Messages
+   (Claude Code) or a media route. Read the existing configuration before proposing an edit, and keep every other
    provider it configures.
 2. **Read current docs.** Use the AI Hub MCP server's `get_doc` when it is connected;
    otherwise fetch `<docs host>/docs/markdown/<slug>` (index: `<docs host>/llms.txt`), using the
@@ -41,7 +41,9 @@ product's domains, keys or configuration.
 | Base URLs, keys, environments, errors | `references/api-and-auth.md` |
 | Choosing a model and route | `references/model-discovery.md` |
 | All pricing shapes, estimates and receipts | `references/pricing.md` |
-| Image/video/music generation and named TTS | `references/media-output.md` |
+| Image generation and edits | `references/media-images.md` |
+| Video jobs and webhooks | `references/media-video.md` |
+| Speech and music generation | `references/media-audio.md` |
 | Streaming, tool calling | `references/streaming-and-tools.md` |
 | Codex CLI, Claude Code and other agents | `references/coding-agents.md` |
 | Something fails | `references/troubleshooting.md` |
@@ -59,3 +61,5 @@ Read `references/multimodal.md` before adding image, audio, PDF or video input. 
 - Never claim a capability the catalogue or docs do not state, such as hosted web search or
   gateway execution of MCP tools.
 - Never select a staging-only model for a production configuration.
+- Never automatically resubmit an accepted or uncertain media job; it can charge twice. Paid
+  media validation needs the user's existing bounded allowance.

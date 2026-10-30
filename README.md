@@ -33,7 +33,7 @@ other clients. Add `--scope user` for every project and `--agent <name>` for one
 gh skill install belivetech/aihub-skills tokenhub-integration
 ```
 
-Pin a release with `--pin v1.2.4`. `gh skill` records the source in the installed `SKILL.md`
+Pin a release with `--pin v1.2.5`. `gh skill` records the source in the installed `SKILL.md`
 frontmatter, so that one file's hash differs from `manifest.json`; the other files match.
 
 ### Skills CLI
@@ -79,7 +79,7 @@ node --experimental-strip-types fixtures/run-offline.ts
 
 ## Versions
 
-`manifest.json` lists every file with its SHA-256. Each release is a tag (`v1.2.4`). A released
+`manifest.json` lists every file with its SHA-256. Each release is a tag (`v1.2.5`). A released
 version's files never change; a correction ships as a new version. This repository is generated
 from the AI Hub console source, so open an issue rather than a pull request that edits the files.
 

@@ -1,7 +1,7 @@
 {
   "name": "aihub",
   "description": "Agent Skills for BeLive AI Hub, the OpenAI-compatible model gateway: integration, model discovery, pricing, streaming, tools, multimodal input and coding agents",
-  "version": "1.2.4",
+  "version": "1.2.5",
   "author": { "name": "BeLive Technology" },
   "homepage": "https://aihub.belive.sg/docs/integration-skill",
   "repository": "https://github.com/belivetech/aihub-skills",
