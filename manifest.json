@@ -1,0 +1,33 @@
+{
+  "name": "AI Hub Skills",
+  "version": "1.2.4",
+  "files": {
+    "skills/tokenhub-integration/LICENSE.txt": "da3b7e551d3a9fa2ce7aded0b65927815f4b6b17c05eda8183cc05693a9f6e4a",
+    "skills/tokenhub-integration/SKILL.md": "4cc7803fbd6a39973d1c1d2859593acfba7cbbd735537915dc22e997683855b8",
+    "skills/tokenhub-integration/references/api-and-auth.md": "5e12b5122e9803b08332fcdc632ae9acd840222dab772e62a97393c5485df59b",
+    "skills/tokenhub-integration/references/coding-agents.md": "b7ff02cc740e25077b0af9ea4fae577f4ca5c0c0e82dd016d386044f6f48661d",
+    "skills/tokenhub-integration/references/media-output.md": "1fa3878ec9289cc6572797d516dd2ab108e142804f73872dce4d1d67f0c473fe",
+    "skills/tokenhub-integration/references/model-discovery.md": "5e93586075a7339260a81a850e7b97b8a8f0692a394846873132436d492d99bb",
+    "skills/tokenhub-integration/references/multimodal.md": "b5fc0f7914b36471f0e366a686d268b54b7f502dad7f5919c80e573b05a029e3",
+    "skills/tokenhub-integration/references/pricing.md": "021999f47279ab1d84c37e2ea4bd985fb024da754ba89e87fffe47712fe88c2c",
+    "skills/tokenhub-integration/references/streaming-and-tools.md": "a52fa83bb353baf9255019a886fe80b072db55d3c8cf014d2a8ddd551d449ab7",
+    "skills/tokenhub-integration/references/troubleshooting.md": "e50e7c3a63510ccaebf61b136d70612f1980a17620b4d57ee8951f5a9437f71c",
+    "skills/tokenhub-integration/assets/.env.example": "98faa77377864cccc026acbde7689349bbba71beecda883a3c0adc4b0fb61cf8",
+    "skills/tokenhub-integration/assets/README.md": "bf1bc3e8704d8764d71ced78352bd8b698350d9ce4652cd8f77529b26f0e6f23",
+    "skills/tokenhub-integration/assets/browser-chat/app/api/chat/route.ts": "858d70b6f64cc38e6e38e8aea442487ef01653b957665e6212fa4ddc5adb91d9",
+    "skills/tokenhub-integration/assets/browser-chat/app/layout.tsx": "d4a038d9d66717bbc8952d920399a2f166048bac2fe6f665e6e3bfcbe909654e",
+    "skills/tokenhub-integration/assets/browser-chat/app/page.tsx": "ac97fa6649321be47af64d4deed34a2884fcdddcb62aa10dfcc4cec84d1e6fc9",
+    "skills/tokenhub-integration/assets/browser-chat/package.json": "31f7d7d721f5fc7b264b508f5ed612025bdb5c99151db4d7f01f758cfd55496f",
+    "skills/tokenhub-integration/assets/browser-chat/tsconfig.json": "f185b2afb4e57c95b60fe8e40686c367045635d249a4edec2b9f35ca20125623",
+    "skills/tokenhub-integration/assets/first-request/first-request.sh": "e502240c40b0bed3ca3af4676576cd146cbf9b7dd80427540cd6878569dffa05",
+    "skills/tokenhub-integration/assets/first-request/first-request.ts": "ef4b7fca76b6b52ebc81f6531ce35a2330c57a553a075e724c0528ae1b85afe7",
+    "skills/tokenhub-integration/assets/first-request/first_request.py": "d42d7e601ac2d5c95b8d957b5e63f41a0a5aa0f8ae5c41057b95b533b0d66466",
+    "skills/tokenhub-integration/assets/fixtures/run-offline.ts": "fb3ae6460ca57eeab94ed730f814e6bf81555595260ae0b0ae3f275374281359",
+    "skills/tokenhub-integration/assets/fixtures/sse-fixture-server.ts": "1021fe65bde99a1341d7730eb907d05e96b044f6a2f8e0d47f4d573d003416ae",
+    "skills/tokenhub-integration/assets/function-tools/tools.ts": "1d80f02522a1618a955f42af083e9637595fc9f7c68ab7c94ba313ee3506b1d1",
+    "skills/tokenhub-integration/assets/terminal-chat/chat.ts": "b6b2f9f5ec7bba92b99fb9cedf46f301c9f9e4ef6be8c7aa6299cf177f449990",
+    "skills/tokenhub-integration/assets/terminal-chat/sse.ts": "cbc791b378c303b44ad1c803897debb14e84176d2436f446fe8d7b276c4b9bea",
+    "skills/tokenhub-integration/assets/terminal-chat/terminal_chat.py": "478aeb93e158877494de0df5fa010e882eaf70c305db75153ab1f5d50c550039",
+    "skills/tokenhub-integration/assets/troubleshooting/poll-job.ts": "9e4137f498495ce55a16597af65cf57a4b0d22406fa6732d9e083541f7bf1098"
+  }
+}
