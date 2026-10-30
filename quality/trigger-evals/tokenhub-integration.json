@@ -36,6 +36,22 @@
     "should_trigger": true
   },
   {
+    "query": "Generate a 5-second 16:9 video with a model on AI Hub, poll the job and save the MP4.",
+    "should_trigger": true
+  },
+  {
+    "query": "My AI Hub video submit timed out. How do I avoid paying for the video twice?",
+    "should_trigger": true
+  },
+  {
+    "query": "Verify the signature on the webhook AI Hub sends when a video job finishes.",
+    "should_trigger": true
+  },
+  {
+    "query": "Use an AI Hub image model to edit a product photo with two reference images.",
+    "should_trigger": true
+  },
+  {
     "query": "Call Tencent Cloud TokenHub at tokenhub.tencentmaas.com with my Tencent SecretId.",
     "should_trigger": false
   },
@@ -61,6 +77,18 @@
   },
   {
     "query": "Explain how transformer attention works.",
+    "should_trigger": false
+  },
+  {
+    "query": "Generate a video with the Runway API and download the result.",
+    "should_trigger": false
+  },
+  {
+    "query": "Verify a Stripe webhook signature in our Express app.",
+    "should_trigger": false
+  },
+  {
+    "query": "Resize and compress these PNG files with sharp.",
     "should_trigger": false
   }
 ]
