@@ -24,7 +24,7 @@ These are separate contracts; do not reuse the named speech body.
   to speak is the final `assistant` message, and the audio returns in `message.audio.data`. Read
   the live page's section on them.
 - `POST <base>/audio/speech/jobs` is the asynchronous workflow.
-- Fixed speech tasks with no model are in the live `capabilities` doc.
+- Fixed speech tasks with no model are in `references/capabilities.md`.
 
 ## Music
 
