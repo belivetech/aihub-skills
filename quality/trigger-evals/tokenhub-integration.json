@@ -52,6 +52,18 @@
     "should_trigger": true
   },
   {
+    "query": "Translate product descriptions into Malay through AI Hub's translate API without choosing a model.",
+    "should_trigger": true
+  },
+  {
+    "query": "Read a receipt image with AI Hub's OCR capability: upload the file, then send its file_id.",
+    "should_trigger": true
+  },
+  {
+    "query": "My AI Hub transcription job returned 404 when I polled /jobs/{id}. Should I submit it again?",
+    "should_trigger": true
+  },
+  {
     "query": "Call Tencent Cloud TokenHub at tokenhub.tencentmaas.com with my Tencent SecretId.",
     "should_trigger": false
   },
@@ -89,6 +101,10 @@
   },
   {
     "query": "Resize and compress these PNG files with sharp.",
+    "should_trigger": false
+  },
+  {
+    "query": "Extract text from a scanned receipt with AWS Textract.",
     "should_trigger": false
   }
 ]

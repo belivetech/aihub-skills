@@ -1,9 +1,9 @@
 ---
 name: tokenhub-integration
-description: Use when integrating BeLive AI Hub (aihub.belive.sg, the OpenAI-compatible LLM gateway) into an application, pointing a coding agent such as Codex CLI or Claude Code at it, migrating an OpenAI-compatible client to it, generating images, video, speech or music through it, handling its job webhooks, or troubleshooting its chat, streaming, tool-calling, media, Responses or Messages routes. Not for Tencent Cloud TokenHub (tokenhub.tencentmaas.com), which is a different product.
+description: Use when integrating BeLive AI Hub (aihub.belive.sg, the OpenAI-compatible LLM gateway) into an application, pointing a coding agent such as Codex CLI or Claude Code at it, migrating an OpenAI-compatible client to it, generating images, video, speech or music through it, calling its fixed-price capability APIs (translation, OCR, transcription, video processing), handling its job webhooks, or troubleshooting its chat, streaming, tool-calling, media, capability, Responses or Messages routes. Not for Tencent Cloud TokenHub (tokenhub.tencentmaas.com), which is a different product.
 license: MIT. Complete terms in LICENSE.txt.
 metadata:
-  version: 1.2.5
+  version: 1.2.6
   docs: https://aihub.belive.sg/docs
 ---
 
@@ -17,13 +17,13 @@ product's domains, keys or configuration.
 
 1. **Identify the target.** Which application or agent, which environment (production or
    staging), and which wire protocol: Chat Completions, Responses (Codex CLI), Messages
-   (Claude Code) or a media route. Read the existing configuration before proposing an edit, and keep every other
+   (Claude Code), a media route or a capability route. Read the existing configuration before proposing an edit, and keep every other
    provider it configures.
 2. **Read current docs.** Use the AI Hub MCP server's `get_doc` when it is connected;
    otherwise fetch `<docs host>/docs/markdown/<slug>` (index: `<docs host>/llms.txt`), using the
    docs host of the chosen environment from `references/api-and-auth.md`. The references below
    are a dated snapshot; prefer the live pages for anything volatile.
-3. **Pick an exact model.** List `GET <base>/models` (public, no key) or call `list_models`.
+3. **Pick an exact model.** Skip this for a capability route, which has no model to choose. List `GET <base>/models` (public, no key) or call `list_models`.
    Use the full `author/slug` id. Tool use needs `tools` in the model's `supported_parameters`.
    A listed model may still be blocked by the caller's key restrictions.
 4. **Make the smallest change.** Set the base URL and key through the client's own supported
@@ -44,6 +44,7 @@ product's domains, keys or configuration.
 | Image generation and edits | `references/media-images.md` |
 | Video jobs and webhooks | `references/media-video.md` |
 | Speech and music generation | `references/media-audio.md` |
+| Ready-made tasks with no model: translation, OCR, transcription, video processing | `references/capabilities.md` |
 | Streaming, tool calling | `references/streaming-and-tools.md` |
 | Codex CLI, Claude Code and other agents | `references/coding-agents.md` |
 | Something fails | `references/troubleshooting.md` |
@@ -62,4 +63,5 @@ Read `references/multimodal.md` before adding image, audio, PDF or video input. 
   gateway execution of MCP tools.
 - Never select a staging-only model for a production configuration.
 - Never automatically resubmit an accepted or uncertain media job; it can charge twice. Paid
-  media validation needs the user's existing bounded allowance.
+  media validation needs the user's existing bounded allowance. The same applies to capability jobs.
+- Never set a consent or rights field on the user's behalf unless the user has confirmed it.
