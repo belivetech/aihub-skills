@@ -52,6 +52,7 @@ Add a remote rule in **Settings > Rules > Add Rule > Remote Rule (GitHub)** with
 From a clone of this repository:
 
 ```bash
+mkdir -p ~/.claude/skills ~/.agents/skills
 cp -R skills/tokenhub-integration ~/.claude/skills/
 cp -R skills/tokenhub-integration ~/.agents/skills/
 ```
