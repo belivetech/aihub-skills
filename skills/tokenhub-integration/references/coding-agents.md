@@ -116,5 +116,5 @@ tools differ from supported local function tools; disable hosted web search.
 Native Anthropic and Bedrock Messages routes preserve qualified thinking and
 effort controls, while other routes have narrower support. Backend `mcp_servers`,
 containers and document blocks are refused. Read `claude-code` before selecting
-advanced controls; do not claim thinking is universally ignored. Unsupported or
-ignored fields are reported in `X-TokenHub-Ignored-Fields` as the live guide states.
+advanced controls; do not claim thinking is universally ignored. Translated routes report discarded fields in `X-TokenHub-Ignored-Fields`; native
+routes reject unsupported controls with an explicit error.
