@@ -1,12 +1,12 @@
 {
   "name": "AI Hub Skills",
-  "version": "1.2.6",
+  "version": "1.2.7",
   "files": {
     "skills/tokenhub-integration/LICENSE.txt": "da3b7e551d3a9fa2ce7aded0b65927815f4b6b17c05eda8183cc05693a9f6e4a",
-    "skills/tokenhub-integration/SKILL.md": "26b6efd41a6ca54c98427afd3ecec45f7927591f4d9d1175f8931f1652c1e53f",
+    "skills/tokenhub-integration/SKILL.md": "8b35eac320c0097d10492c52c5a25af8dacb7579f44ff340f7c441abd59376ec",
     "skills/tokenhub-integration/references/api-and-auth.md": "5e12b5122e9803b08332fcdc632ae9acd840222dab772e62a97393c5485df59b",
     "skills/tokenhub-integration/references/capabilities.md": "62f7b11813bebeda0c6c527552c3c969205112697f315ea4db659ec6b2e27ca9",
-    "skills/tokenhub-integration/references/coding-agents.md": "b7ff02cc740e25077b0af9ea4fae577f4ca5c0c0e82dd016d386044f6f48661d",
+    "skills/tokenhub-integration/references/coding-agents.md": "2f869c0a3e947226adace165e889cc41ddf7f666a88afcc8462823ff07c57713",
     "skills/tokenhub-integration/references/media-audio.md": "b61c493b7660235bd20e5137d5e7ac61e506839b40113915290ffb883c8e0bb3",
     "skills/tokenhub-integration/references/media-images.md": "6cfdd9203d68b14cbc14c897d996d50992fe5800637963b48c38d8fa97e7a7a9",
     "skills/tokenhub-integration/references/media-video.md": "6c3ce5e31b9fbf6e63640d13409164df541e803e870557555acdc6067948c9d0",

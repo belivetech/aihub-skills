@@ -1,9 +1,9 @@
 ---
 name: tokenhub-integration
-description: Use when integrating BeLive AI Hub (aihub.belive.sg, the OpenAI-compatible LLM gateway) into an application, pointing a coding agent such as Codex CLI or Claude Code at it, migrating an OpenAI-compatible client to it, generating images, video, speech or music through it, calling its fixed-price capability APIs (translation, OCR, transcription, video processing), handling its job webhooks, or troubleshooting its chat, streaming, tool-calling, media, capability, Responses or Messages routes. Not for Tencent Cloud TokenHub (tokenhub.tencentmaas.com), which is a different product.
+description: Use when integrating BeLive AI Hub (aihub.belive.sg, the OpenAI-compatible LLM gateway) into an application, setting up Codex CLI, Claude Code CLI, Codex Desktop or Claude Desktop with AI Hub models or its docs MCP server, migrating an OpenAI-compatible client, generating images, video, speech or music, calling fixed-price capability APIs (translation, OCR, transcription, video processing), handling job webhooks, or troubleshooting chat, streaming, tools, media, capabilities, Responses or Messages. Not for Tencent Cloud TokenHub (tokenhub.tencentmaas.com), which is a different product.
 license: MIT. Complete terms in LICENSE.txt.
 metadata:
-  version: 1.2.6
+  version: 1.2.7
   docs: https://aihub.belive.sg/docs
 ---
 
@@ -46,7 +46,7 @@ product's domains, keys or configuration.
 | Speech and music generation | `references/media-audio.md` |
 | Ready-made tasks with no model: translation, OCR, transcription, video processing | `references/capabilities.md` |
 | Streaming, tool calling | `references/streaming-and-tools.md` |
-| Codex CLI, Claude Code and other agents | `references/coding-agents.md` |
+| Set up Codex CLI, Claude Code CLI, Codex Desktop or Claude Desktop; connect the docs MCP server | `references/coding-agents.md` |
 | Something fails | `references/troubleshooting.md` |
 
 Runnable code: `assets/` (first request, terminal chat, function tools, browser chat, offline
