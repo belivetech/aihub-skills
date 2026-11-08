@@ -12,6 +12,18 @@
     "should_trigger": true
   },
   {
+    "query": "Help me configure Codex Desktop with BeLive AI Hub and connect its public docs MCP server. Keep my normal Codex CLI setup.",
+    "should_trigger": true
+  },
+  {
+    "query": "Install the BeLive AI Hub integration skill ZIP in Claude Desktop and use its MCP connector to find the current model-provider guide.",
+    "should_trigger": true
+  },
+  {
+    "query": "Set up a local filesystem MCP server in Claude Desktop; I am not using BeLive AI Hub.",
+    "should_trigger": false
+  },
+  {
     "query": "Which AI Hub models support tool calling and cost under $1 per million input tokens?",
     "should_trigger": true
   },

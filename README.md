@@ -7,7 +7,7 @@ API over many model providers. AI Hub is not Tencent Cloud TokenHub.
 
 | Skill | Use it for |
 |---|---|
-| [tokenhub-integration](skills/tokenhub-integration/SKILL.md) | Base URLs and keys, current model discovery, chat, streaming and function tools, Responses and Messages compatibility, multimodal input, pricing shapes and complete application examples |
+| [tokenhub-integration](skills/tokenhub-integration/SKILL.md) | Base URLs and keys, current model discovery, chat, streaming and function tools, Codex CLI, Claude Code CLI, Codex Desktop and Claude Desktop setup, Responses and Messages compatibility, multimodal input, pricing shapes and complete application examples |
 
 The skill reads the current AI Hub docs and model catalogue before choosing a model or route.
 The [MCP server](https://aihub.belive.sg/docs/tokenhub-mcp) is optional: without it the skill
@@ -33,7 +33,7 @@ other clients. Add `--scope user` for every project and `--agent <name>` for one
 gh skill install belivetech/aihub-skills tokenhub-integration
 ```
 
-Pin a release with `--pin v1.2.6`. `gh skill` records the source in the installed `SKILL.md`
+Pin a release with `--pin v1.2.7`. `gh skill` records the source in the installed `SKILL.md`
 frontmatter, so that one file's hash differs from `manifest.json`; the other files match.
 
 ### Skills CLI
@@ -52,18 +52,52 @@ Add a remote rule in **Settings > Rules > Add Rule > Remote Rule (GitHub)** with
 From a clone of this repository:
 
 ```bash
+mkdir -p ~/.claude/skills ~/.agents/skills
 cp -R skills/tokenhub-integration ~/.claude/skills/
-cp -R skills/tokenhub-integration ~/.codex/skills/
+cp -R skills/tokenhub-integration ~/.agents/skills/
 ```
+
+The Codex user folder `~/.agents/skills/` is shared by its local CLI and Desktop clients.
+For Claude Desktop chat, upload the versioned ZIP from the AI Hub Skills page in
+**Customize → Skills → + → Create skill → Upload a skill**, then enable it.
+Organization policy and code-execution settings can control availability.
 
 Restart the client and check that `tokenhub-integration` is listed. A versioned ZIP of the same
 files is on the [AI Hub Skills page](https://aihub.belive.sg/docs/integration-skill).
 
-Optionally connect the MCP server for live model and price tools:
+## Set up your coding client
+
+Ask the assistant: **Use the tokenhub-integration skill to set up AI Hub in my
+client. Fetch the current guide, preserve my existing configuration and keep my
+key out of chat.** Specify the client you use:
+
+| Client | Current provider guide | Docs MCP connection |
+|---|---|---|
+| Codex CLI | [Codex CLI](https://aihub.belive.sg/docs/codex-cli) | Add the TOML below to the active Codex home |
+| Claude Code CLI | [Claude Code](https://aihub.belive.sg/docs/claude-code) | Run the command below |
+| Codex Desktop | [Codex Desktop](https://aihub.belive.sg/docs/codex-desktop) | Settings → MCP servers → Add server → Streamable HTTP, or the shared TOML |
+| Claude Desktop | [Claude Desktop](https://aihub.belive.sg/docs/claude-desktop) | Customize → Connectors → Add custom connector, No sign in |
+
+Public remote MCP URL: `https://aihub.belive.sg/mcp`. No inference key is needed.
 
 ```bash
 claude mcp add --transport http tokenhub https://aihub.belive.sg/mcp
 ```
+
+```toml
+[mcp_servers.tokenhub]
+url = "https://aihub.belive.sg/mcp"
+```
+
+The standard Codex macOS configuration is `~/.codex/config.toml`; the optional
+`codex-aihub` launcher uses `~/.codex-aihub/config.toml` instead. Merge the entry
+without duplicating an existing table, then restart. See the [MCP guide](https://aihub.belive.sg/docs/tokenhub-mcp)
+for Windows paths and managed-client details. Ask the MCP server's `get_doc` tool
+for `codex-cli`, `claude-code`, `codex-desktop` or `claude-desktop`.
+
+The skill supplies instructions and MCP supplies public tools. Neither switches
+the inference provider or installs credentials. Desktop setup is documented;
+the CLI coding-task evidence does not certify Desktop end to end.
 
 ## Examples
 
@@ -79,7 +113,7 @@ node --experimental-strip-types fixtures/run-offline.ts
 
 ## Versions
 
-`manifest.json` lists every file with its SHA-256. Each release is a tag (`v1.2.6`). A released
+`manifest.json` lists every file with its SHA-256. Each release is a tag (`v1.2.7`). A released
 version's files never change; a correction ships as a new version. This repository is generated
 from the AI Hub console source, so open an issue rather than a pull request that edits the files.
 
